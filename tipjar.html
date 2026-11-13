@@ -33,7 +33,7 @@
 
   <link rel="stylesheet" href="assets/css/site.css">
   <style>
-  /* Tip Jar page only */
+  /* Tip Jar desktop layout */
   .hero-inner {
     grid-template-columns: minmax(0, 460px) minmax(0, 460px);
     gap: 2rem;
@@ -47,6 +47,24 @@
 
   .hero-copy {
     align-items: flex-start;
+  }
+
+  /* Restore responsive layout */
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    .hero-image-wrap {
+      margin-inline: auto;
+    }
+
+    .hero-copy {
+      width: 100%;
+      min-width: 0;
+      margin-inline: auto;
+    }
   }
 </style>
 </head>
